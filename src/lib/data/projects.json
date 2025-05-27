@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "youtube-downloader",
+    "title": "YouTube Downloader",
+    "image": "/assets/Project1.png",
+    "tags": ["Python", "Tkinter", "API"],
+    "description": "This project allows users to download YouTube videos in various resolutions. Built using Python and Tkinter, it supports multiple formats and is completely ad-free.",
+    "link": "https://github.com/yourname/youtube-downloader"
+  },
+  {
+    "slug": "portfolio-website",
+    "title": "Portfolio Website",
+    "image": "/assets/Project2.png",
+    "tags": ["Svelte", "TailwindCSS"],
+    "description": "My personal portfolio designed using SvelteKit and TailwindCSS, showcasing my work, skills, and contact.",
+    "link": "https://yourportfolio.com"
+  }
+]
