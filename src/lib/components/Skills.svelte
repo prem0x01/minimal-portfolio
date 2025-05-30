@@ -1,48 +1,49 @@
 <script>
-  const skills = [
+    const skills = [
   {
     name: 'Java',
     image: '/assets/skills/java.png',
     tags: ['OOP', 'Backend', 'Android'],
-    description: 'Used for Android app development, especially in my custom Notes and DepressionGuru apps using MVVM.'
+    description: 'Extensively used for Android development in my PropertyX app, implementing MVVM architecture for clean code separation. Also utilized Spring Framework in my CollabLyrics project to build robust, scalable backend services.'
   },
   {
     name: 'GoLang',
     image: '/assets/skills/golang.png',
     tags: ['Backend', 'Systems', 'API'],
-    description: 'Used for high-performance backend APIs, like the YouTube downloader and Hospital Management dashboard.'
+    description: 'Built high-performance backend APIs using Go’s powerful concurrency model—capable of handling up to 170k requests/second. Used it for both web and mobile backends to ensure speed and reliability.'
   },
   {
     name: 'Python',
     image: '/assets/skills/python.png',
     tags: ['Automation', 'Scripting', 'AI'],
-    description: 'Built automation scripts, YouTube video downloader, and SQLite-based CLI tools using Python.'
+    description: 'Developed automation tools and penetration testing scripts. Created DepressionGuru, a full-stack mental health web app using Flask and Django. Python’s versatility made it a go-to for scripting and AI prototyping.'
   },
   {
     name: 'JavaScript',
     image: '/assets/skills/js.png',
     tags: ['Frontend', 'Browser'],
-    description: 'Used for dynamic interactions in my portfolio and project dashboards.'
+    description: 'Implemented client-side functionality and API integrations in several web apps. JavaScript served as the bridge between dynamic UIs and backend services, making apps interactive and responsive.'
   },
   {
     name: 'Svelte',
     image: '/assets/skills/svelete.png',
     tags: ['Frontend', 'Framework'],
-    description: 'Used to create fast, reactive UIs with minimal code in my animated and responsive portfolio.'
+    description: 'My favorite frontend framework—used to build highly reactive and lightweight interfaces. Powering my animated, responsive portfolio site, Svelte enables faster development with cleaner code.'
   },
   {
     name: 'SQLite3',
     image: '/assets/skills/sqlite.png',
     tags: ['Database', 'Embedded'],
-    description: 'Implemented lightweight databases in my hospital system and feedback forms with secure SQL logic.'
+    description: 'Used SQLite to manage local data storage in Android apps and to simulate database operations during API testing. Ideal for lightweight, embedded use cases where performance is key.'
   },
   {
     name: 'Docker',
     image: '/assets/skills/docker.png',
     tags: ['DevOps', 'Containers'],
-    description: 'Used to containerize and deploy backend services efficiently, especially Golang-based APIs.'
+    description: 'Containerized backend services—especially Go-based APIs—for seamless deployment and environment consistency. Docker improved scalability and portability across development and production.'
   }
 ];
+
 
 </script>
 
@@ -67,12 +68,14 @@
         </div>
 
         <!-- 🖼 Skill Image -->
-        <img src={skill.image} alt={skill.name} class="w-full h-32 object-contain p-4 bg-white dark:bg-[#1a1a1a] z-10 relative" />
+        <div class="w-full h-33 object-contain p-4 bg-white dark:bg-[#1a1a1a]  relative items-center justify-center flex">
+            <img src="{skill.image}" alt="{skill.name}" class="dark:invert w-[31%] h-[30%] object-contain " />
+         </div>
 
         <!-- 🏷 Tags -->
         <div class="flex flex-wrap gap-2 px-4 py-2 z-10 relative">
           {#each skill.tags as tag}
-            <span class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white">{tag}</span>
+            <span class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-black dark:text-white">{tag}</span>
           {/each}
         </div>
 
@@ -90,12 +93,12 @@
     background: black;
     clip-path: polygon(0 0, 100% 0%, 70% 100%, 0% 100%);
     padding: 0.75rem;
-    transform: skewX(-12deg);
+    transform: skewX(0deg);
     margin-top: 0.5rem;
   }
 
   .not-skewed {
   display: inline-block;
-  transform: skewX(12deg);
+  transform: skewX(0deg);
 }
 </style>
