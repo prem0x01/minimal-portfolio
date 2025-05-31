@@ -1,18 +1,51 @@
 [
-  {
-    "slug": "youtube-downloader",
-    "title": "YouTube Downloader",
-    "image": "/assets/Project1.png",
-    "tags": ["Python", "Tkinter", "API"],
-    "description": "This project allows users to download YouTube videos in various resolutions. Built using Python and Tkinter, it supports multiple formats and is completely ad-free.",
-    "link": "https://github.com/yourname/youtube-downloader"
-  },
-  {
-    "slug": "portfolio-website",
-    "title": "Portfolio Website",
-    "image": "/assets/Project2.png",
-    "tags": ["Svelte", "TailwindCSS"],
-    "description": "My personal portfolio designed using SvelteKit and TailwindCSS, showcasing my work, skills, and contact.",
-    "link": "https://yourportfolio.com"
-  }
+    {
+        "slug": "propertyx-android-app",
+        "title": "PropertyX – Smart Real Estate App",
+        "image": "/assets/propertyx.jpg",
+        "tags": [
+            "Android",
+            "Java",
+            "Firebase"
+        ],
+        "description": "A modern Android app for property listings and management. PropertyX allows users to browse, post, and manage real estate with real-time updates using Firebase. Features include authentication, image uploads, and a clean UI for both agents and buyers.",
+        "link": "https://github.com/prem-mankar/PropertyX"
+    },
+    {
+        "slug": "depressionguru",
+        "title": "DepressionGuru – Mental Health Platform",
+        "image": "/assets/depressiongutu.jpg",
+        "tags": [
+            "Python",
+            "Flask",
+            "SQLite",
+            "Mental Health"
+        ],
+        "description": "A supportive web app where users can anonymously share their struggles and receive guidance from others. Built with Flask, SQLite, and a mysterious yet calming UI. Prioritizes privacy and human connection for mental wellness.",
+        "link": "https://github.com/prem-mankar/DepressionGuru"
+    },
+    {
+        "slug": "blogy-cms",
+        "title": "Blogy – Headless Blog CMS",
+        "image": "/assets/test.jpg",
+        "tags": [
+            "SvelteKit",
+            "Markdown",
+            "CMS",
+            "TailwindCSS"
+        ],
+        "description": "A minimal yet powerful CMS to create and manage blogs directly from your browser. Supports Markdown parsing, live preview, and dynamic content generation using SvelteKit. Fast, secure, and easily deployable.",
+        "link": "https://github.com/prem-mankar/Blogy"
+    },
+    {
+        "slug": "portfolio-website",
+        "title": "Portfolio Website",
+        "image": "/assets/Project2.png",
+        "tags": [
+            "Svelte",
+            "TailwindCSS"
+        ],
+        "description": "My personal portfolio designed using SvelteKit and TailwindCSS, showcasing my work, skills, and contact.",
+        "link": "https://yourportfolio.com"
+    }
 ]
