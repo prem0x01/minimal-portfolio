@@ -59,9 +59,7 @@
 </footer>
 
 <style>
-  html, body {
-    height: 100%;
-  }
+  
 
   :global(body) {
     display: flex;

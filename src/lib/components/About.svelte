@@ -46,9 +46,6 @@
 </section>
 
 <style>
-  .animate-wave {
-    animation: wave 2s infinite;
-  }
 
   @keyframes wave {
     0%, 100% { transform: rotate(0deg); }
