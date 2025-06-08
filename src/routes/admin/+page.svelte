@@ -1,3 +1,4 @@
+import { redirect } from '@sveltejs/kit';
 import { verifyToken } from '$lib/api/auth';
 import cookie from 'cookie';
 
@@ -7,11 +8,10 @@ export async function load({ request }) {
   const user = verifyToken(token);
 
   if (!user) {
-    return {
-      status: 302,
-      redirect: '/login'
-    };
+    // Proper SvelteKit redirection
+    throw redirect(302, '/login');
   }
 
   return { user };
 }
+
