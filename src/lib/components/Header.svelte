@@ -61,10 +61,10 @@
   $: currentPath = $page.url.pathname;
 
   const navItems = [
-    { href: '/about', label: 'About', icon: '' },
-    { href: '/skills', label: 'Skills', icon: '' },
-    { href: '/projects', label: 'Projects', icon: '' },
-    { href: '/contact', label: 'Contact', icon: '' }
+    { href: '/about', label: 'About' },
+    { href: '/skills', label: 'Skills' },
+    { href: '/projects', label: 'Projects'},
+    { href: '/contact', label: 'Contact' }
   ];
 
   // Close mobile menu when clicking outside
@@ -82,7 +82,7 @@
   class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-out
          {headerVisible || headerHovered || menuOpen ? 'translate-y-0' : '-translate-y-full'}
          {scrollY > 50 ? 'bg-white/90 dark:bg-black/90 backdrop-blur-xl shadow-2xl' : 'bg-white/95 dark:bg-black/95 backdrop-blur-md shadow-md'}
-         border-b border-gray-200 dark:border-gray-700"
+         border-b border-black dark:border-white"
   on:mouseenter={() => headerHovered = true}
   on:mouseleave={() => headerHovered = false}
 >
@@ -104,7 +104,7 @@
     
     <!-- Desktop Navigation with enhanced effects -->
     <nav class="hidden lg:flex items-center space-x-2" role="navigation" aria-label="Main navigation">
-      {#each navItems as {href, label, icon}}
+      {#each navItems as {href, label}}
         <a
           {href}
           class="relative group px-4 py-2 rounded-lg transition-all duration-300 ease-out
@@ -113,20 +113,13 @@
                  {currentPath === href ? 'nav-active bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100' : ''}"
           aria-current={currentPath === href ? 'page' : undefined}
         >
-          <!-- Icon with animation -->
-          <span class="inline-block mr-2 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
-            {icon}
-          </span>
+  
           {label}
           
-          <!-- Enhanced underline effect -->
-          <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-700 to-black dark:from-gray-300 dark:to-white
-                       transition-all duration-300 group-hover:w-full group-hover:left-0
-                       {currentPath === href ? 'w-full left-0' : ''}"></span>
           
           <!-- Hover glow -->
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                      bg-gradient-to-r from-gray-500/10 to-gray-700/10 dark:from-gray-300/10 dark:to-gray-500/10 rounded-lg blur-sm -z-10"></div>
+          <div class="absolute inset-0 opacity-0 border border-black dark:border-white group-hover:opacity-100 transition-opacity duration-300
+                      bg-gradient-to-r from-gray-500/10 to-gray-700/10 dark:from-gray-300/10 dark:to-gray-500/10 rounded-lg  -z-10"></div>
         </a>
       {/each}
     </nav>
@@ -134,21 +127,35 @@
     <!-- Right Controls -->
     <div class="flex items-center space-x-3">
       <!-- Enhanced Theme Toggle -->
-      <button
-        aria-label="Toggle theme"
-        on:click={toggleTheme}
-        class="relative p-3 rounded-full transition-all duration-300 ease-out
-               hover:bg-gray-100 dark:hover:bg-gray-800
-               hover:shadow-lg hover:scale-110 active:scale-95
-               {theme === 'dark' ? 'bg-gray-100 dark:bg-gray-800' : 'bg-gray-100 dark:bg-gray-800'}"
-      >
-        <span class="text-xl transition-all duration-300 hover:rotate-180 inline-block">
-          {theme === "dark" ? "☀️" : "🌙"}
-        </span>
-        <!-- Theme toggle glow -->
-        <div class="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300
-                    bg-gradient-to-r from-gray-500/20 to-gray-700/20 dark:from-gray-300/20 dark:to-gray-500/20 rounded-full blur-md -z-10"></div>
-      </button>
+     <button
+    aria-label="Toggle theme"
+    on:click={toggleTheme}
+    class="relative p-3 rounded-full transition-all duration-300 ease-out
+           hover:bg-gray-100 dark:hover:bg-gray-800
+           hover:shadow-lg hover:scale-110 active:scale-95
+           bg-gray-100 dark:bg-gray-800"
+  >
+    <span class="w-6 h-6 text-black dark:text-white transition-transform duration-300 hover:rotate-180 inline-block">
+      {#if theme === 'dark'}
+        <!-- Sun icon for dark mode -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 17.95l-1.414 1.414m12.728 0l-1.414-1.414M7.05 6.05L5.636 4.636M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+        </svg>
+      {:else}
+        <!-- Moon icon for light mode -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+        </svg>
+      {/if}
+    </span>
+
+    <!-- Glow effect -->
+    <div class="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300
+                bg-gradient-to-r from-gray-500/20 to-gray-700/20 dark:from-gray-300/20 dark:to-gray-500/20 
+                rounded-full blur-md -z-10"></div>
+  </button>
 
       <!-- Enhanced Mobile Menu Button -->
       <button
@@ -190,7 +197,7 @@
       <div class="absolute inset-0 bg-white/80 dark:bg-black/80 backdrop-blur-xl"></div>
       
       <div class="relative z-10">
-        {#each navItems as {href, label, icon}, index}
+        {#each navItems as {href, label}, index}
           <a
             {href}
             on:click={closeMenu}
@@ -203,11 +210,7 @@
             style="animation-delay: {index * 0.1}s"
             aria-current={currentPath === href ? 'page' : undefined}
           >
-            <!-- Icon with stagger animation -->
-            <span class="inline-block mr-4 text-2xl transition-all duration-300 
-                         group-hover:scale-125 group-hover:rotate-12 group-hover:mr-6">
-              {icon}
-            </span>
+           
             
             <span class="font-medium tracking-wide transition-all duration-300 group-hover:tracking-wider">
               {label}
@@ -251,9 +254,7 @@
     animation: slide-down 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  .pulse-once {
-    animation: pulse-once 0.3s ease-out forwards;
-  }
+
 
   .clip-diagonal {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
@@ -276,9 +277,7 @@
     z-index: -1;
   }
 
-  .dark .nav-active::before {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
-  }
+ 
 
   /* Enhanced logo hover effects */
   .logo-container:hover .clip-diagonal {
@@ -305,9 +304,6 @@
     border-radius: 2px;
   }
 
-  .dark nav::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-  }
 
   /* Enhanced mobile menu item animations */
   .lg\:hidden nav a {
@@ -327,9 +323,7 @@
     outline-offset: 2px;
   }
 
-  .dark button:focus, .dark a:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.5);
-  }
+  
 
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
