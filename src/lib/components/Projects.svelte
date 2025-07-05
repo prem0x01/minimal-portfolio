@@ -27,13 +27,6 @@
                     <div
                         class="flex flex-col h-full bg-white dark:bg-[#1a1a1a] shadow-md rounded-lg overflow-hidden transition-transform group-hover:scale-105 group-hover:shadow-xl"
                     >
-                        <!-- Sloped Label -->
-                        <div
-                            class="absolute top-4 left-4 sloped-label text-white text-sm font-semibold z-20 px-4 py-1"
-                        >
-                            <span class="not-skewed">PROJECT</span>
-                        </div>
-
                         <img
                             src={project.image}
                             alt={project.title}
