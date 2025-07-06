@@ -1,0 +1,15 @@
+[
+    {
+        "id": "1",
+        "title": "Concurrency and Parallelism",
+        "description": "A  comprehensive guide covering Go's concurrency primitives including goroutines, WaitGroups, data races, atomic operations, mutexes, and channels with practical examples and synchronization techniques.",
+        "date": "07-06-2025",
+        "slug": "first",
+        "tags": [
+            "Go",
+            "Concurrency"
+        ],
+        "readTime": 5,
+        "published": true
+    }
+]

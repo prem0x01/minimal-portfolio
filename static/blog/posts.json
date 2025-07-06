@@ -1,0 +1,43 @@
+const postsJsonContent = `{
+    "posts": [
+        {
+            "id": "getting-started-with-svelte",
+            "title": "Getting Started with Svelte",
+            "excerpt": "Learn the basics of Svelte and why it's becoming popular among developers.",
+            "date": "2024-01-15",
+            "readTime": "5 min read",
+            "tags": [
+                "svelte",
+                "javascript",
+                "frontend"
+            ],
+            "published": true
+        },
+        {
+            "id": "building-responsive-layouts",
+            "title": "Building Responsive Layouts",
+            "excerpt": "Tips and tricks for creating responsive web layouts with CSS Grid and Flexbox.",
+            "date": "2024-01-10",
+            "readTime": "7 min read",
+            "tags": [
+                "css",
+                "responsive",
+                "layout"
+            ],
+            "published": true
+        },
+        {
+            "id": "modern-javascript-features",
+            "title": "Modern JavaScript Features",
+            "excerpt": "Explore the latest JavaScript features that will improve your development workflow.",
+            "date": "2024-01-05",
+            "readTime": "6 min read",
+            "tags": [
+                "javascript",
+                "es6",
+                "modern"
+            ],
+            "published": true
+        }
+    ]
+}`;
