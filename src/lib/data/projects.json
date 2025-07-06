@@ -15,7 +15,7 @@
     {
         "slug": "nccmdexe-netcat-go",
         "title": "ncCmdExe – Netcat Clone with Remote Command Execution",
-        "image": "/assets/netcat.jpg",
+        "image": "/assets/logo.png",
         "tags": [
             "Go",
             "Networking",
