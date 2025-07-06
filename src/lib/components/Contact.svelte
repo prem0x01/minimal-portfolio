@@ -108,7 +108,7 @@
 
       <button
         type="submit"
-        class="bg-black text-white dark:text-black dark:bg-gray-100 px-6 py-3 rounded hover:bg-gray-700  transition"
+        class="bg-black text-white dark:text-white dark:bg-black px-6 py-3 rounded hover:bg-gray-700  transition"
       >
         Send Message
       </button>
